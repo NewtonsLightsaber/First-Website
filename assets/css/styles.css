@@ -1,0 +1,514 @@
+@font-face {
+  font-family: "Poly";
+  src: url("../fonts/Poly-Regular.otf");
+}
+
+@font-face {
+  font-family: "Bariol";
+  src: url("../fonts/bariol_regular-webfont.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 500px;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.active {
+  color: #050E2D;
+}
+
+.section.about-us a {
+  color: #FF9388;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 60px;
+  padding: 0;
+}
+
+footer {
+  background-color: #050e2d;
+  padding: 65px 0;
+  min-height: 330px;
+  margin: 0 auto;
+}
+
+footer .media {
+  margin: 0 60px;
+}
+
+.header-vid-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.vid-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.vid-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  opacity: 0.5;
+  /*background-color: #3ECA8A;*/
+  z-index: -99;
+}
+
+header.home:before {
+  background-color: #3ECA8A;
+}
+
+header.work:before {
+  background-color: #AEAAE9;
+}
+
+header.about-us:before {
+  background-color: #FF9388;
+}
+
+video {
+  width: 100%;
+  z-index: -100;
+}
+
+.header-bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("assets/img/community1");
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: 0 center;
+  z-index: -100;
+}
+
+.header-bar {
+  display: flex;
+  padding: 15px;
+  position: fixed;
+  width: 1100px;
+  left: 50%;
+  margin-left: -550px;
+  z-index: 10;
+}
+
+.header-bar-bg {
+  display: block;
+  width: 100%;
+  height: 88px;
+  position: fixed;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 9;
+}
+
+.header-bar-bg.scroll {
+  opacity: 1;
+}
+
+.header-bar.scroll nav a {
+  color: #050E2D;
+}
+
+.logo {
+  cursor: pointer;
+  text-align: right;
+}
+
+.menu {
+  width: 960px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.lang {
+  text-align: left;
+}
+
+.header-logo {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 170px 170px 0px 170px;
+  color: white;
+  font-family: "Poly";
+  font-size: 80px;
+}
+
+.header-logo svg {
+  max-width: 600px;
+}
+
+nav {
+  padding: 15px 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+  list-style:none;
+}
+
+nav a {
+  color: #fff;
+  font-family: "Bariol", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  transition: all 0.4s ease;
+}
+
+.header-bar a:hover {
+  color: #050E2D;
+}
+
+svg.logo-mini path {
+  fill: #fff;
+}
+
+.scroll svg.logo-mini path {
+  fill: #050E2D;
+}
+
+svg.logo-big path {
+  fill: #fff;
+}
+
+.media {
+  margin: 45px 60px 0 60px;
+}
+
+.text-block {
+  font-family: "Poly";
+  margin: 45px 60px;
+  padding-left: 4px;
+}
+
+.text-block.intro {
+  color: #050E2D;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.text-block.intro.about-us {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.text-block.content {
+  color: #999;
+  font-size: 28px;
+  padding-right: 20%;
+}
+
+.text-block.body-link {
+  font-family: "Bariol", sans-serif;
+  font-size: 26px;
+  margin: 60px 60px;
+}
+
+.text-block.body-link a {
+  color: #000;
+}
+
+.text-block.body-link a:hover {
+  padding-left: 10px;
+  transition: all 0.2s;
+}
+
+.text-item {
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  font-family: "Bariol", sans-serif;
+  font-size: 20px;
+  color: #050E2D;
+}
+
+.about-us .text-item {
+  width: 100%;
+  padding: 30px 30px;
+  margin-top: 8px;
+  background-color: #FF9388;
+  color: white;
+}
+
+.text-item .date {
+  font-family: "Bariol", serif;
+  font-size: 14px;
+  color: #999;
+}
+
+footer .text-item{
+  font-family: "Bariol", sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-left: 20%;
+}
+
+footer .text-item p {
+  font-family: "Poly", serif;
+}
+
+footer .text-item span {
+  font-size: 20px;
+}
+
+footer a {
+  font-family: "Poly", serif;
+  color: white;
+  text-decoration: underline;
+}
+
+.section {
+  margin: 65px 60px;
+  font-family: "Bariol";
+  font-size: 22px;
+}
+
+.section .media {
+  margin: 0;
+}
+
+.section .section-name {
+  font-family: "Bariol", sans-serif;
+  font-size: 20px;
+  color: #999;
+}
+
+.section h1 {
+  font-family: "Poly", serif;
+}
+
+.section.about-us h1 {
+  color: #FF9388;
+}
+
+.section.about-us p {
+  font-family: "Poly";
+  font-size: 18px;
+}
+
+.section .body-link {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer-logo {
+  text-align: center;
+  width: 100%;
+}
+
+.img-item {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 8px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.img-item:hover:before {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.img-item span {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 80%;
+  font-family: "Bariol";
+  font-size: 26px;
+  font-weight: 500;
+  color: transparent;
+}
+
+.img-item:hover span {
+  left: 30px;
+  color: white;
+  transition: all 0.2s;
+}
+
+.about-us .column, footer .column {
+  flex: 33%;
+  max-width: 33%;
+}
+
+.about-us img {
+  /*display: block;*/
+  vertical-align: middle;
+  width: 100%;
+}
+
+.about-us .img-item {
+  height: auto;
+  vertical-align: middle;
+  margin-top: 8px;
+}
+
+.about-us .img-item:before {
+  background-color: #FF9388;
+}
+
+.about-us .img-item:hover:before {
+  opacity: 0.9;
+}
+
+.about-us .img-item span {
+  top: 20%;
+  font-family: "Bariol", sans-serif;
+  font-size: 24px;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 2 adjacent equal columns */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+@media screen and (max-width: 1100px) {
+  .header-bar {
+    width: 100%;
+    margin-left: 0;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  header, .header-bg {
+    height: 260px;
+  }
+
+  .header-logo {
+    padding: 100px 100px 0px 100px;
+    font-size: 40px;
+  }
+
+  .header-logo svg {
+    max-width: 300px;
+  }
+}
+
+/* 1 column */
+@media screen and (max-width: 700px) {
+    .column, .about-us .column, footer .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .about-us .img-item {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .footer-logo {
+      top: 0;
+    }
+
+    footer .text-item {
+      margin: 30px 0 0 0;
+    }
+
+    .section, hr, .media, .text-block, .text-block.body-link {
+      margin-left: 19px;
+      margin-right: 19px;
+    }
+
+    .text-block.content, .text-block.intro {
+      padding: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+  .header-logo {
+    padding: 70px 20px 0 20px;
+  }
+
+  .header-logo svg {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header, .header-bg {
+    height: 225px;
+  }
+}
